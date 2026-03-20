@@ -184,6 +184,12 @@ ul {
   gap: 10px;
 }
 
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
 .logo-img {
   height: 42px;
   width: auto;
@@ -198,6 +204,13 @@ ul {
 
 .logo-accent {
   color: var(--clr-accent);
+}
+
+.logo-tagline {
+  font-size: 0.62rem;
+  letter-spacing: 0.3px;
+  color: var(--clr-text-light);
+  margin-top: 2px;
 }
 
 .nav-links {
@@ -867,6 +880,10 @@ ul {
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.7;
   max-width: 320px;
+}
+
+.footer-tagline {
+  margin-top: 8px;
 }
 
 .footer-links h4 {

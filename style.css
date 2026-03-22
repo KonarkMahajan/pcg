@@ -1062,19 +1062,35 @@ ul {
     padding: 72px 0;
   }
 
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    height: 64px;
+    padding: 0 10px;
+  }
+
+  .logo-text-nav {
+    font-size: 1.1rem;
+  }
+
   .nav-links {
     position: fixed;
-    top: 72px;
+    top: 64px;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(16px);
     flex-direction: column;
-    padding: 24px;
+    padding: 18px;
     gap: 4px;
     border-bottom: 1px solid var(--clr-border);
     transform: translateY(-120%);
     transition: transform var(--transition);
+    overflow-y: auto;
+    max-height: calc(100vh - 64px);
   }
 
   .nav-links.open {
@@ -1092,11 +1108,44 @@ ul {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 7vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .hero-company-name {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .hero-company-tagline {
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-logo-img {
+    height: 180px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    margin-bottom: 42px;
   }
 
   .hero-stats {
-    gap: 24px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
   }
 
   .stat-number {
@@ -1115,18 +1164,19 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .contact-grid {
+  .about-grid,
+  .about-cards,
+  .contact-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+  }
+
+  .contact-grid {
+    gap: 32px;
   }
 
   .contact-form-wrapper {
-    padding: 28px 20px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    padding: 24px 16px;
   }
 
   .footer-bottom {
@@ -1134,7 +1184,61 @@ ul {
     gap: 8px;
     text-align: center;
   }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links a,
+  .footer-links li {
+    font-size: 0.82rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .hero-logo-img {
+    height: 140px;
+  }
+
+  .hero-company-name {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .hero-company-tagline {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 9vw, 2.3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 92%;
+  }
+
+  .contact-card {
+    padding: 16px;
+  }
+
+  .contact-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 0.85rem;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
 
 @media (max-width: 480px) {
   .container {

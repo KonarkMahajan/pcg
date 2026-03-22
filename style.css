@@ -184,6 +184,12 @@ ul {
   gap: 10px;
 }
 
+.logo-text-nav {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-primary-dark);
+}
+
 .logo-block {
   display: flex;
   flex-direction: column;
@@ -306,6 +312,62 @@ ul {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 60px;
+}
+
+.hero-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero-logo-img {
+  height: 280px;
+  width: auto;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes taglineFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-company-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.hero-company-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-accent-light);
+  margin-bottom: 32px;
+  animation: taglineFadeSlide 1s ease-out 0.3s both;
 }
 
 .hero-tag {
